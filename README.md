@@ -13,8 +13,13 @@ AI Gym Trainer is a **real-time AI-powered fitness trainer** that uses **MediaPi
 - 📊 **Form Evaluation:** Calculates joint angles and provides feedback (Good Form / Go Deeper / Keep Going).  
 - 🔄 **Auto Rep Counter:** Automatically counts reps when proper movement is detected.  
 - 🕒 **Workout Timer:** Tracks your session duration.  
+- 📈 **Workout History Dashboard:** View complete workout history with interactive charts and analytics.
+- 📊 **Progress Visualization:** Line charts showing rep progress over time and exercise distribution.
+- 🏆 **Statistics Tracking:** Total workouts, favorite exercise, average form score, and best streak.
+- 💾 **Data Export:** Export your workout history as CSV for external analysis.
+- 🗑️ **Session Management:** Delete individual sessions or clear entire history.
 - 🌗 **Dark & Light Mode:** Toggle between themes for comfortable viewing.  
-- 💥 **Workout Summary:** Displays total reps, form score, and duration after each session.  
+- 💥 **Workout Summary:** Displays total reps, form score, and duration after each session.
 
 ---
 
@@ -24,8 +29,9 @@ AI Gym Trainer is a **real-time AI-powered fitness trainer** that uses **MediaPi
 |------------|----------------|
 | Frontend | HTML5, CSS3, JavaScript |
 | AI/Computer Vision | MediaPipe Pose (by Google) |
-| Visualization | Canvas API |
-| Design | Custom CSS Animations, Gradient UI |
+| Visualization | Canvas API, Chart.js |
+| Data Storage | Browser Storage API (Persistent) |
+| Design | Custom CSS Animations, Gradient UI, Glassmorphism |
 
 ---
 
@@ -61,17 +67,47 @@ AI-GYM-Trainer/
 
 4) Displays form feedback, rep count, and form score in real time.
 
-🧰 Future Enhancements:
+---
 
-1) 🧍‍♂️ Add more exercise types (lunges, planks, yoga poses)
+## 📊 Workout History Features
 
-2) 📈 Store user progress and stats using a database
+The AI Gym Trainer now includes a comprehensive workout history dashboard:
 
-3) 🔊 Add audio feedback
+### 📈 Dashboard Overview
+- **Total Statistics:** View total workouts completed, total reps, favorite exercise, and average form score
+- **Best Streak Tracker:** Track your longest consecutive workout streak
+- **Total Time Spent:** See cumulative time spent working out
 
-4) 📱 Make it mobile-responsive
+### 📉 Visual Analytics
+- **Progress Chart:** Line graph showing rep count progression over your last 10 workouts
+- **Exercise Distribution:** Doughnut chart displaying which exercises you perform most
 
-5) ☁️ Integrate cloud-based model training
+### 🗂️ Session Management
+- **Recent Sessions List:** View last 10 workout sessions with complete details
+- **Session Details:** Date, exercise type, reps completed, duration, and form score
+- **Delete Sessions:** Remove individual workout sessions
+- **Clear History:** Wipe entire workout history with one click
+
+### 💾 Data Export
+- **CSV Export:** Download your complete workout history as a CSV file for analysis in Excel or Google Sheets
+
+### 🔐 Data Persistence
+All workout data is stored locally using the Browser Storage API, ensuring your privacy while maintaining your workout history across sessions.
+
+---
+
+## 🧰 Future Enhancements
+
+- [ ] 🧍‍♂️ Add more exercise types (lunges, planks, yoga poses)
+- [ ] 🔊 Add voice announcements for rep counts and form feedback
+- [ ] 🎯 Implement goal setting and achievement badges
+- [ ] 📱 Improve mobile responsiveness and touch controls
+- [ ] 👥 Add social sharing of workout achievements
+- [ ] 📅 Create custom workout plans and schedules
+- [ ] 🌐 Multi-language support
+- [ ] 🔔 Workout reminders and notifications
+- [ ] ☁️ Cloud sync for cross-device data access
+- [ ] 🤖 AI-powered workout recommendations based on history
 
 **👨‍💻 Author**
 
