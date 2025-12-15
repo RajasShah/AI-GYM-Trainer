@@ -1,0 +1,232 @@
+# ===================================
+# AI Gym Trainer - Git Ignore File
+# ===================================
+
+# ----------------
+# Operating System
+# ----------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ----------------
+# IDEs & Editors
+# ----------------
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# ----------------
+# Dependencies
+# ----------------
+
+# Node modules (if you add npm later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Bower
+bower_components/
+
+# ----------------
+# Build & Dist
+# ----------------
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ----------------
+# Logs & Databases
+# ----------------
+
+# Log files
+*.log
+logs/
+*.log.*
+
+# Database files
+*.sql
+*.sqlite
+*.db
+
+# ----------------
+# Temporary Files
+# ----------------
+
+# Cache
+.cache/
+*.tmp
+*.temp
+
+# ----------------
+# Environment & Config
+# ----------------
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Config files with sensitive data
+config.local.js
+secrets.json
+
+# ----------------
+# Testing
+# ----------------
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output/
+
+# Test results
+test-results/
+*.spec.js.snap
+
+# ----------------
+# Media Files (Optional)
+# ----------------
+
+# Large media files (uncomment if needed)
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+
+# ----------------
+# Backup Files
+# ----------------
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# ----------------
+# Misc
+# ----------------
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Certificates
+*.pem
+*.key
+*.cert
+
+# Python (if you add Python scripts later)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# ----------------
+# Project Specific
+# ----------------
+
+# Screenshots folder content (keep folder, ignore images)
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+screenshots/*.gif
+!screenshots/README.md
+
+# User data (if storing locally)
+user-data/
+workout-data/
+
+# Debug files
+debug.log
+error.log
