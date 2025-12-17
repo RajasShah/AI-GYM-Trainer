@@ -1374,41 +1374,40 @@ function getSessionDuration() {
     }
     
     ctx.restore();
-}
+}// Exercise name constants
+const EXERCISE_NAMES = {
+    'bicep': 'BICEP CURLS',
+    'pushup': 'PUSH-UPS',
+    'pullup': 'PULL-UPS',
+    'situp': 'SIT-UPS',
+    'squat': 'SQUATS'
+};
+
+const EXERCISE_SHORT = {
+    'bicep': 'BICEP',
+    'pushup': 'PUSH',
+    'pullup': 'PULL',
+    'situp': 'SITUP',
+    'squat': 'SQUAT'
+};
         
         function setExercise(exercise, event) {
-            currentExercise = exercise;
-            counter = 0;
-            stage = null;
-            goodFormCount = 0;
-            document.getElementById('counter').textContent = '0';
-            
-            const exercises = {
-                'bicep': 'BICEP CURLS',
-                'pushup': 'PUSH-UPS',
-                'pullup': 'PULL-UPS',
-                'situp': 'SIT-UPS',
-                'squat': 'SQUATS'
-            };
-            
-            const exerciseShort = {
-                'bicep': 'BICEP',
-                'pushup': 'PUSH',
-                'pullup': 'PULL',
-                'situp': 'SITUP',
-                'squat': 'SQUAT'
-            };
-            
-            document.getElementById('exerciseName').textContent = exercises[exercise];
-            document.getElementById('currentEx').textContent = exerciseShort[exercise];
-            updateFeedback('Ready to Start', 'good');
-            
-            // Update active button
-            document.querySelectorAll('.exercise-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-        }
+    currentExercise = exercise;
+    counter = 0;
+    stage = null;
+    goodFormCount = 0;
+    document.getElementById('counter').textContent = '0';
+    
+    document.getElementById('exerciseName').textContent = EXERCISE_NAMES[exercise];
+    document.getElementById('currentEx').textContent = EXERCISE_SHORT[exercise];
+    updateFeedback('Ready to Start', 'good');
+    
+    // Update active button
+    document.querySelectorAll('.exercise-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+}
         
         function resetCounter() {
             counter = 0;
