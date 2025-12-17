@@ -1116,14 +1116,27 @@ window.addEventListener('load', () => {
         let sessionStartTime = null;  
         let timerInterval = null;        
         let exerciseGoal = null;
-        function calculateAngle(a, b, c) {
-            const radians = Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(a.y - b.y, a.x - b.x);
-            let angle = Math.abs(radians * 180.0 / Math.PI);
-            if (angle > 180.0) {
-                angle = 360 - angle;
-            }
-            return angle;
-        }
+        /**
+ * Calculates the angle between three points in 2D space
+ * Used for measuring joint angles during exercise tracking
+ * 
+ * @param {Object} a - First point with x,y coordinates (e.g., shoulder)
+ * @param {Object} b - Middle point/vertex with x,y coordinates (e.g., elbow)
+ * @param {Object} c - Third point with x,y coordinates (e.g., wrist)
+ * @returns {number} Angle in degrees (0-180)
+ * 
+ * @example
+ * const angle = calculateAngle(shoulder, elbow, wrist);
+ * console.log(angle); // 45.5
+ */
+function calculateAngle(a, b, c) {
+    const radians = Math.atan2(c.y - b.y, c.x - b.x) - Math.atan2(a.y - b.y, a.x - b.x);
+    let angle = Math.abs(radians * 180.0 / Math.PI);
+    if (angle > 180.0) {
+        angle = 360 - angle;
+    }
+    return angle;
+}
         
         function updateProgress(angle) {
             const circle = document.getElementById('progressCircle');
